@@ -1,1 +1,0 @@
-# openai-image-generator-project
