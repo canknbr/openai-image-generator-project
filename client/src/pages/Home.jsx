@@ -10,12 +10,15 @@ function Home() {
     const fetchPost = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:8080/api/v1/post', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+        const response = await fetch(
+          'https://image-generator-f6fo.onrender.com/api/v1/post',
+          {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
         if (response.ok) {
           const data = await response.json();
           setPost(data.data.reverse());
